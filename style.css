@@ -22,7 +22,7 @@ html,body{
     z-index: 99;
     padding-top: 15vh;
     padding-left: 7vw;
-    /* display: none; */
+    display: none;
 }
 #loader .load {
     display: flex;
@@ -425,4 +425,49 @@ margin-top: 4.8vw;
 }
 ._canvas_container{
     z-index: 9999999 !important;
+}
+#footer{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+    position: relative;
+    padding-left: 28vw;
+}
+.footertext{
+    /* background-color: red; */
+    position: relative;
+
+}
+.footertext h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+.footertext h2{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: absolute;
+    font-family: "silk serif";
+    color: transparent;
+    -webkit-text-stroke: 0.8px white;
+    top: -10%;
+    opacity: 1;
+}
+#footer h2 span{
+    /* background-color: red; */
+    font-family: "silk serif";
+    color: transparent;
+    -webkit-text-stroke: 0.8px white;
+    opacity: 0;
+}
+#page1 img{
+    position: absolute;
+    width: 22%;
+    height: 65%;
+    left: 20%;
+    top: 34%;
+    opacity: 0;
+}
+.textc .sp1{
+    display: inline-block;
+    background-color: red;
 }

@@ -238,5 +238,102 @@ Shery.mouseFollower({
     //Parameters are optional.
     
   });
-  
+ var footeText = document.querySelectorAll("#footer .text")
+ footeText.forEach(function(elem){
+    var textCont = elem.textContent;
+    var splitted = textCont.split("");
+    var clutter = "";
+    splitted.forEach(function(e){
+        clutter += `<span>${e}</span>`
+    })
+    elem.innerHTML = clutter
+ }) 
+ var foot = document.querySelector(".footertext")
+ foot.addEventListener("mouseenter",function(){
+    gsap.to("h1 span",{
+        opacity:0,
+        stagger:0.05,
 
+    })
+    gsap.to("h2 span",{
+        opacity:1,
+        stagger:0.05,
+        delay:0.2
+        
+    })
+ })
+ foot.addEventListener("mouseleave",function(){
+    gsap.to("h2 span",{
+        opacity:0,
+        stagger:0.05,
+        delay:0.2
+
+
+    })
+    gsap.to("h1 span",{
+        opacity:1,
+        stagger:0.05,
+        
+    })
+ })
+
+ 
+
+var sp1 = document.querySelector(".sp1")
+
+sp1.addEventListener("mousemove",function(move){
+    gsap.to("#page1 img",{
+        x:move.x - (500),
+        y:move.y -(495),
+        opacity:1,
+        
+
+
+    })
+})
+
+sp1.addEventListener("mouseleave",function(move){
+    gsap.to("#page1 img",{
+        
+        opacity:0
+
+
+    })
+})
+var sp2 = document.querySelector(".sp2")
+sp2.addEventListener("mousemove",function(moveimage){
+    gsap.to("#page1 img",{
+        x:moveimage.x - (500),
+        y:moveimage.y -(495),
+        opacity:1,
+        
+
+
+    })
+    
+})
+sp2.addEventListener("mouseleave",function(moveimage){
+    gsap.to("#page1 img",{
+        
+        opacity:0
+
+
+    })
+})
+var sh1 = document.querySelector("#page1 .textc .sp1");
+
+    // Add event listener for mouseenter event
+    sh1.addEventListener("mouseenter", function() {
+        // Apply the CSS class with text-stroke property
+        sh1.classList.add("text-stroke");
+        // Change text color to yellow
+        sh1.style.color = "yellow";
+    });
+
+    // Add event listener for mouseleave event (optional)
+    sh1.addEventListener("mouseleave", function() {
+        // Remove the CSS class with text-stroke property
+        sh1.classList.remove("text-stroke");
+        // Change text color back to default
+        sh1.style.color = "";
+    });
